@@ -1,4 +1,4 @@
-name := "immutable-queue-sc"
+name := "immutable-queue-scala"
 
 version := "0.1"
 
