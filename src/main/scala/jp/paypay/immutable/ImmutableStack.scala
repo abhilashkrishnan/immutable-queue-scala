@@ -54,26 +54,3 @@ case class EmptyStack[E]() extends Stack[E] {
     throw new NoSuchElementException("Stack is empty")
   }
 }
-
-object Main {
-
-  def main(args: Array[String]): Unit = {
-    var stack:Stack[String] = EmptyStack()
-    stack = stack.push("A")
-    stack = stack.push("B")
-    stack = stack.push("C")
-    traverse(stack)
-    stack = stack.pop()
-    traverse(stack)
-  }
-
-  def traverse(stack: Stack[String]): Unit = {
-    var s = stack
-
-    while (s!= null && !s.isEmpty) {
-      print(s.head() + " -> ")
-      s = s.pop()
-    }
-    println()
-  }
-}

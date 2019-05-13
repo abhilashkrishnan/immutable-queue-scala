@@ -96,26 +96,3 @@ case class EmptyQueue[E]() extends Queue[E] {
     throw new NoSuchElementException("Queue is empty")
   }
 }
-
-object QueueTest {
-
-  def main(args: Array[String]): Unit = {
-    var q: Queue[String] = EmptyQueue[String]
-    q = q.enQueue("B")
-    q = q.enQueue("C")
-    traverse(q)
-    q = q.deQueue()
-    traverse(q)
-  }
-
-  def traverse(queue: Queue[String]): Unit = {
-    var q = queue
-
-    while (!q.isEmpty) {
-      val h = q.head.get
-      print(h + " -> ")
-      q = q.deQueue()
-    }
-    println()
-  }
-}
