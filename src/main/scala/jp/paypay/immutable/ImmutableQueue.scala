@@ -7,7 +7,7 @@ package jp.paypay.immutable
   * An ImmutableQueue object is initially constructed using {@link EmptyQueue} which is a singleton instance since every empty queue is the same.
   * To operations performed on the ImmutableQueue will essentially create a new ImmutableQueue. The original ImmutableQueue will remain the same.
   *
-  * @param forwards The backwards stack keeps track of the elements being enQueued (since a queue is like a reverse stack).
+  * @param forwards The forwards stack keeps track of the elements being deQueued.
   * @param backwards The backwards stack keeps track of the elements being enQueued (since a queue is like a reverse stack)
   */
 case class ImmutableQueue[E](forwards: Stack[E], backwards: Stack[E]) extends Queue[E] {
