@@ -79,7 +79,11 @@ case class ImmutableQueue[E](forwards: Stack[E], backwards: Stack[E]) extends Qu
   * @tparam E The element to be enQueued and deQueued
   */
 case class EmptyQueue[E]() extends Queue[E] {
-
+ 
+  /**
+  * Empty queue always return true
+  * @return is empty
+  */
   override def isEmpty: Boolean = {
     true
   }
