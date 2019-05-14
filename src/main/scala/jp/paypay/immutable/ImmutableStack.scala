@@ -34,7 +34,7 @@ case class ImmutableStack[E](h: E, tail: Stack[E]) extends Stack[E] {
 
 /**
   * Immutable instance of empty stack
-  * @tparam E The element to be pushed and popped from the stack
+  * @param E The element to be pushed and popped from the stack
   */
 case class EmptyStack[E]() extends Stack[E] {
 
