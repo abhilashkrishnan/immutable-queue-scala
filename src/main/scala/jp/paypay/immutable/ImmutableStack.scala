@@ -37,7 +37,11 @@ case class ImmutableStack[E](h: E, tail: Stack[E]) extends Stack[E] {
   * @param E The element to be pushed and popped from the stack
   */
 case class EmptyStack[E]() extends Stack[E] {
-
+  
+ /**
+  * Empty stack always return true
+  * @return is empty
+  */
   override def isEmpty: Boolean = {
     true
   }
