@@ -5,7 +5,7 @@ package jp.paypay.immutable
   * The ImmutableQueue is constructed using forwards and backwards stacks to keep track of the elements.
   * The usual enqueue and dequeue operations are provided, as well as a method to peek at the top item on the forwards stack, a method to test for whether the stack is empty.
   * An ImmutableQueue object is initially constructed using {@link EmptyQueue} which is a singleton instance since every empty queue is the same.
-  * To operations performed on the ImmutableQueue will essentially create a new ImmutableQueue. The original ImmutableQueue will remain the same.
+  * The enQueue and deQueue operations performed on the ImmutableQueue will essentially create a copy of ImmutableQueue. The original ImmutableQueue will remain the same.
   *
   * @param forwards The forwards stack keeps track of the elements being deQueued.
   * @param backwards The backwards stack keeps track of the elements being enQueued (since a queue is like a reverse stack)
