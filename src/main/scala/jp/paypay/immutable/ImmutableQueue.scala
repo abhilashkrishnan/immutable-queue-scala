@@ -76,7 +76,7 @@ case class ImmutableQueue[E](forwards: Stack[E], backwards: Stack[E]) extends Qu
 
 /**
   * Immutable instance of empty Queue
-  * @tparam E The element to be enQueued and deQueued
+  * @param E The element to be enQueued and deQueued
   */
 case class EmptyQueue[E]() extends Queue[E] {
  
